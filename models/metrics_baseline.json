@@ -1,0 +1,34 @@
+{
+  "model": "MobileNetV2",
+  "dataset": "NEU Surface Defect (1800 images, 6 classes)",
+  "split": {
+    "train": 1260,
+    "val": 270,
+    "test": 270,
+    "seed": 42
+  },
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "epochs": 12,
+  "train_time_sec": 69.0,
+  "best_val_acc": 1.0,
+  "test_acc": 1.0,
+  "onnx_validation": {
+    "logits_max_diff": 2.38e-05,
+    "logits_mean_diff": 2.37e-06,
+    "softmax_max_diff": 4.83e-06,
+    "softmax_mean_diff": 6.75e-09,
+    "top1_agreement": 1.0
+  },
+  "cpu_benchmark_i5_12450H": {
+    "1_thread": {
+      "pytorch_mean_ms": 22.07,
+      "onnx_mean_ms": 9.78,
+      "speedup": 2.26
+    },
+    "4_threads": {
+      "pytorch_mean_ms": 26.55,
+      "onnx_mean_ms": 4.71,
+      "speedup": 5.64
+    }
+  }
+}

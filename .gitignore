@@ -1,0 +1,23 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Raw dataset (1,800 images)
+data/
+
+# Intermediate checkpoints & heavy weights (keep lightweight optimized ONNX & metrics)
+models/*.pth
+models/model_raw.onnx
+models/model_unfolded.onnx
+models/resnet_18_opt.onnx
+models/mobilevit_s_opt.onnx
+!models/model_opt.onnx
+!models/metrics_baseline.json
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
